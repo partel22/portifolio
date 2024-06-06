@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>fx_trading</title>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <style>
+    /* CSS styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .video-list {
+      width: 70%;
+      float: left;
+    }
+    span{
+      color: green;
+    }
+
+
+    .profile {
+      width: 30%;
+      float: right;
+
+    }
+    marquee{
+      background-color: grey;
+      color: white;
+      width: 100%;
+      height: 60px;
+      padding: 20px;
+    }
+
+    .progress-bar {
+      background-color: #f0f0f0;
+      height: 20px;
+      margin-bottom: 10px;
+    }
+
+    .progress {
+      background-color: #007bff;
+      height: 100%;
+    }
+
+    .video-link {
+      display: block;
+      padding: 10px 0;
+      text-decoration: none;
+      color: gold;
+      background-color: black;
+    }
+
+    .video-link:hover {
+      background-color: #007bff;
+    }
+    {
+      color: pink;
+      height: 15px;
+    }
+    i{
+      color: green;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="video-list">
+      <h2><img src="partel.jpeg" alt="logo" width="120px" height="120px"  class="logo" />    FX-TRADING</h2>
+      <a class="video-link" id="videoPlayer" href="video1.mp4" onclick="updateProgress(1)">Introduction to Web Design and Development</a>
+      <a class="video-link" id="videoPlayer" href="video1.mp4" onclick="updateProgress(2)"><i class="fa fa-graduation-cap" aria-hidden="true"></i>Topic 1</a>
+      <a class="video-link" id="videoPlayer"  href="video1.mp4" onclick="updateProgress(3)"><i class="fa fa-graduation-cap" aria-hidden="true"></i>Topic 2</a>
+      <a class="video-link" id="videoPlayer" href="video1.mp4" onclick="updateProgress(4)"><i class="fa fa-graduation-cap" aria-hidden="true"></i>Topic 3</a>
+      <a class="video-link" id="videoPlayer" href="video5.mp4" onclick="updateProgress(5)"><i class="fa fa-graduation-cap" aria-hidden="true"></i>Topic 4</a>
+      <a class="video-link" id="videoPlayer" href="video6.mp4" onclick="updateProgress(6)"><i class="fa fa-graduation-cap" aria-hidden="true"></i>Topic 5</a>
+      <a class="video-link" id="videoPlayer" href="video7.mp4" onclick="updateProgress(7)"><i class="fa fa-graduation-cap" aria-hidden="true"></i>Topic 6</a>
+      <a class="video-link" id="videoPlayer" href="video8.mp4" onclick="updateProgress(8)"><i class="fa fa-graduation-cap" aria-hidden="true"></i>Topic 7</a>
+      <a class="video-link" id="videoPlayer" href="video9.mp4" onclick="updateProgress(9)"><i class="fa fa-graduation-cap" aria-hidden="true"></i>Topic 8</a>
+      <a class="video-link" id="videoPlayer" href="video10.mp4" onclick="updateProgress(10)"><i class="fa fa-graduation-cap" aria-hidden="true"></i>Topic 9</a>
+      <a class="video-link" id="videoPlayer" href="video11.mp4" onclick="updateProgress(11)"><i class="fa fa-graduation-cap" aria-hidden="true"></i>Topic 11</a>
+      <a class="video-link" id="videoPlayer" href="video12.mp4" onclick="updateProgress(12)"><i class="fa fa-graduation-cap" aria-hidden="true"></i>Topic 12</a>
+      <a class="video-link" id="videoPlayer" href="video13.mp4" onclick="updateProgress(14)"><i class="fa fa-graduation-cap" aria-hidden="true"></i>Topic 14</a>
+      <a class="video-link" id="videoPlayer" href="video14.mp4" onclick="updateProgress(15)"><i class="fa fa-graduation-cap" aria-hidden="true"></i>Topic 15</a>
+      <a class="video-link" id="videoPlayer" href="video14.mp4" onclick="updateProgress(16)"><i class="fa fa-graduation-cap" aria-hidden="true"></i>Topic 16</a>
+      <a class="video-link" id="videoPlayer" href="video15.mp4" onclick="updateProgress(17)"><i class="fa fa-graduation-cap" aria-hidden="true"></i>Topic 17</a>
+      <a class="video-link" id="videoPlayer" href="video16.mp4" onclick="updateProgress(18)"><i class="fa fa-graduation-cap" aria-hidden="true"></i>Topic 18</a>
+      <a class="video-link" id="videoPlayer" href="video17.mp4" onclick="updateProgress(19)"><i class="fa fa-graduation-cap" aria-hidden="true"></i>Topic 19</a>
+      <a class="video-link" id="videoPlayer" href="video18.mp4" onclick="updateProgress(20)"><i class="fa fa-graduation-cap" aria-hidden="true"></i>Topic 20</a>
+      <!-- Add more video links for additional topics -->
+    </div>
+
+    <div class="profile">
+      <h2>Profile</h2>
+      <div class="progress-bar">
+        <div class="progress" id="progress" style="width: 0%;"></div>
+      </div>
+      <p id="progressText">Course Progress: 0%</p>
+    </div>
+  </div><br
+   <section id="footer">
+        <div class="container footer-row">
+            <hr />
+            <div class="footer-left-col">
+                <div class="footer-links">
+                    <div class="link-title">
+                        <h4>COURSE OUTLINE</h4>
+                        <p>Website development involves frontend, focusing on user interface, backend handling server-side logic, and databases managing data storage and retrieval.p>
+                        
+                    </div>
+                    <div class="link-title">
+                        <h4>Part 1: <b>Frontend development</b></h4>
+                         Developing server-side functionality handling data processing and logic.<br><br>
+                         Languages used:<br><span>HTML<br>CSS <br>JAVASCRIPT</span>
+                  
+                    </div>
+                    <div class="link-title">
+                        <h4>Part 2: Backend development</h4>
+                        Developing server-side functionality handling data processing and logic.<br><br>
+                         Languages used:<br><span>PHP<br>DJANGO</span>
+
+                
+                    </div>
+                    <div class="link-title">
+                        <h4>Part 3: Databases</h4>
+                       Storing and managing structured data for efficient retrieval and manipulation in web applications.
+                    </div>
+                </div>
+            </div>
+            <div class="footer-right-col">
+                <div class="footer-info">
+                    <div class="copyright-text">
+                        <marquee behaviour="altenate'"><strong>LEARN A SKILL AS EALIER AS NOW! A SKILL SOLVES 90% OF FINANCIAL PROBLEM,LEARN TO SOLVE A PROBLEM<br><br><i class="fa fa-phone" aria-hidden="true"></i>+254758762150</strong></marquee>
+                      
+                    </div>
+        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+  <script>
+    // JavaScript code to update course progress
+    function updateProgress(videoNumber) {
+      var progressBar = document.getElementById('progress');
+      var progressText = document.getElementById('progressText');
+      var progress = videoNumber * 5; // Each video is 10% of the course progress
+      
+      progressBar.style.width = progress + '%';
+      progressText.textContent = 'Course Progress: ' + progress + '%';
+    }
+      // JavaScript code to restrict video playing
+    var videoPlayer = document.getElementById('videoPlayer');
+
+    videoPlayer.addEventListener('ended', function() {
+      // If the first video has ended, enable autoplay for the next video
+      if (videoPlayer.src.includes('video1.mp4')) {
+        // Load and play the next video
+        var nextVideo = document.createElement('source');
+        nextVideo.src = 'video2.mp4';
+        nextVideo.type = 'video/mp4';
+        videoPlayer.appendChild(nextVideo);
+        videoPlayer.play();
+      }
+    });
+
+  </script>
+</body>
+</html>

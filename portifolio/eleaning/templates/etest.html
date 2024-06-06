@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sequential Video Playback</title>
+</head>
+<body>
+  <h2>Tutorial Videos</h2>
+  <video id="videoPlayer" controls width="640">
+    <source src="video1.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <script>
+    // JavaScript code to restrict video playing
+    var videoPlayer = document.getElementById('videoPlayer');
+
+    videoPlayer.addEventListener('ended', function() {
+      // If the first video has ended, enable autoplay for the next video
+      if (videoPlayer.src.includes('video1.mp4')) {
+        // Load and play the next video
+        var nextVideo = document.createElement('source');
+        nextVideo.src = 'video2.mp4';
+        nextVideo.type = 'video/mp4';
+        videoPlayer.appendChild(nextVideo);
+        videoPlayer.play();
+      }
+    });
+  </script>
+</body>
+</html>
