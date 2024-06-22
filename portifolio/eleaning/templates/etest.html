@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sequential Video Playback</title>
+  <title>video section</title>
 </head>
 <body>
   <h2>Tutorial Videos</h2>
@@ -13,11 +13,11 @@
   </video>
 
   <script>
-    // JavaScript code to restrict video playing
+    // JavaScript code to restrict video playing/video restriction
     var videoPlayer = document.getElementById('videoPlayer');
 
     videoPlayer.addEventListener('ended', function() {
-      // If the first video has ended, enable autoplay for the next video
+      // If the first video has ended, enable autoplay for the next video. i will enable this feature
       if (videoPlayer.src.includes('video1.mp4')) {
         // Load and play the next video
         var nextVideo = document.createElement('source');
